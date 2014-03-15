@@ -19,3 +19,5 @@ $ svn-to-git
 ```
 
 If there are any issues with the script, or suggested improvements, leave a note in the [issues](https://github.com/iwhitfield/svn-to-git/issues "SVN-To-Git Issues").
+
+Futher information on svn-to-git can be found [here](http://blog.zackehh.com/converting-subversion-repository-git/ "Converting A Subversion Repository To Git").

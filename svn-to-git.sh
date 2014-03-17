@@ -109,7 +109,9 @@ case "$choice" in
 	echo
 	svn_clone="git svn clone $svn_url -A authors.txt $git_path -b $branches -t $tags -T $trunk --prefix=import/"
 	;;
-3)	svn_clone="git svn clone $svn_url -A authors.txt $git_path --prefix=import/"
+3)	capture trunk "Please enter the name of your trunk folder (just hit enter if it's the root): "
+	if [[ "$trunk" != "" ]]; then trunk="-T $trunk "; fi
+	svn_clone="git svn clone $svn_url -A authors.txt $git_path $trunk --prefix=import/"
 	;;
 *)	echo "Incorrect code supplied, exiting!"
 	exit 1
